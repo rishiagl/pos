@@ -8,7 +8,6 @@ import { IndexPage } from "./pages/index-page";
 import { LoginPage } from "./pages/login-page";
 import { LogoutPage } from "./pages/logout-page";
 import { AuthenticationGuard } from "./authentication-guard";
-import { Home } from "./pages/Home";
 import { HomePage } from "./pages/home-page";
 
 export const App = () => {
