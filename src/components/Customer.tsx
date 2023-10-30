@@ -3,6 +3,7 @@ import Select from "react-select";
 import CustomerModal from "./modals/customer-modal";
 import { getCustomer } from "../external/Customer";
 import { useAuth0 } from "@auth0/auth0-react";
+import profilepic from "../assets/user-profile.jpg"
 
 export type CustomerType = {
   name?: string;
@@ -102,7 +103,7 @@ export default function Customer(props: Props) {
         <div className="flex justify-center m-2 w-full">
           <img
             className="w-40 h-40 rounded-full"
-            src="../assets/user-profile.jpg"
+            src={profilepic}
             alt="Rounded avatar"
           ></img>
         </div>

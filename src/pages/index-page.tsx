@@ -1,4 +1,5 @@
 import { useAuth0 } from "@auth0/auth0-react";
+import logo from "../assets/easemypos_logo_square.png";
 
 export function IndexPage() {
    const { isAuthenticated } = useAuth0();
@@ -7,7 +8,7 @@ export function IndexPage() {
     <div className="flex flex-col justify-center h-screen p-2 bg-slate-100">
       <div className="flex flex-row justify-center p-5">
         <img
-          src="../../assets/easemypos_logo_square.png"
+          src={logo}
           alt="logo"
           className=""
           width="200"
