@@ -74,7 +74,7 @@ export default function Customer(props: Props) {
         <div className="flex justify-between mb-2">
           <h4>Customer</h4>
           <button
-            className="py-0.5 px-2 rounded bg-slate-400"
+            className="py-0.5 px-2 rounded text-white bg-main"
             onClick={() => setShowCustomerModal(true)}
           >
             <svg

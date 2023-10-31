@@ -131,15 +131,15 @@ export default function CustomerModal(props: Props) {
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-slate-100 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                 <div className="flex flex-col bg-slate-100 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                   <div className="m-2">
-                  <Dialog.Title
-                    as="h3"
-                    className="text-lg font-semibold leading-6 text-gray-900"
-                  >
-                    Add New Customer
-                  </Dialog.Title>
+                    <Dialog.Title
+                      as="h3"
+                      className="text-lg font-semibold leading-6 text-gray-900"
+                    >
+                      Add New Customer
+                    </Dialog.Title>
                   </div>
                   <div className="m-2">
-                  <form>
+                    <form>
                       <div className="flex flex-row mb-4">
                         <label className="form-label w-1/3">Phone No: </label>
                         <input
@@ -220,7 +220,7 @@ export default function CustomerModal(props: Props) {
                           Submit
                         </button>
                       </div>
-                  </form>
+                    </form>
                   </div>
                 </div>
                 {/* <div className="bg-gray-50 px-4 py-3 flex flex-row justify-between sm:px-6">

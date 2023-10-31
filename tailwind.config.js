@@ -23,6 +23,7 @@ export default {
         'slate-700': '#334155',
         'slate-800': '#1e293b',
         'slate-900': '#0f172a',
+        'red-700': '#b91c1c',
       },
       fontFamily: {
         sans: ['Graphik', 'sans-serif'],

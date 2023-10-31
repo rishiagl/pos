@@ -45,7 +45,7 @@ export function HomePage() {
   if (!user) {
     return null;
   }
-  
+
   useEffect(() => {
     let isMounted = true;
 
@@ -109,7 +109,7 @@ export function HomePage() {
       companyUser.company_id
     );
     if (data) {
-      setCompany(data)
+      setCompany(data);
       console.log(data);
     }
     if (error) {
@@ -216,65 +216,69 @@ export function HomePage() {
                 setitemList={setitem_list}
               ></Product>
             </div>
-            <div className="lg:w-1/3 m-1 p-2 flex flex-col justify-left rounded bg-slate-200">
-              <div className="flex justify-between mb-2">
-                <h4>Summary</h4>
-              </div>
+            <div className="lg:w-1/3 m-1 p-2 flex flex-col justify-between rounded bg-slate-200">
+              <div>
+                {/* Header */}
+                <div className="flex justify-between mb-2">
+                  <h4>Summary</h4>
+                </div>
 
-              <div className="flex flex-col justify-between bg-slate-100 rounded p-2 font-semibold m-1">
-                <div className="flex flex-row w-full">
-                  <div className="w-3/5">Taxable Value</div>
-                  <div className="w-2/5">{taxable_value}</div>
+                <div className="flex flex-col justify-between bg-slate-100 rounded p-2 font-semibold m-1">
+                  <div className="flex flex-row w-full">
+                    <div className="w-3/5">Taxable Value</div>
+                    <div className="w-2/5">{taxable_value}</div>
+                  </div>
+                  <div className="flex flex-row w-full">
+                    <div className="w-3/5">CGST</div>
+                    <div className="w-2/5">{cgst}</div>
+                  </div>
+                  <div className="flex flex-row w-full">
+                    <div className="w-3/5">SGST</div>
+                    <div className="w-2/5">{sgst}</div>
+                  </div>
+                  <div className="flex flex-row w-full">
+                    <div className="w-3/5">IGST</div>
+                    <div className="w-2/5">{igst}</div>
+                  </div>
                 </div>
-                <div className="flex flex-row w-full">
-                  <div className="w-3/5">CGST</div>
-                  <div className="w-2/5">{cgst}</div>
+
+                {/* Grand Total */}
+                <div className="flex flex-col justify-between bg-slate-100 rounded p-2 font-semibold m-1">
+                  <div className="flex flex-row w-full">
+                    <div className="w-3/5">Grand Total</div>
+                    <div className="w-2/5">{amount}</div>
+                  </div>
                 </div>
-                <div className="flex flex-row w-full">
-                  <div className="w-3/5">SGST</div>
-                  <div className="w-2/5">{sgst}</div>
-                </div>
-                <div className="flex flex-row w-full">
-                  <div className="w-3/5">IGST</div>
-                  <div className="w-2/5">{igst}</div>
+
+                {/* Amount Paid and Due */}
+                <div className="flex flex-col justify-between bg-slate-100 rounded p-2 font-semibold m-1">
+                  <div className="flex flex-row w-full">
+                    <div className="w-3/5">Amount Paid</div>
+                    <div className="w-2/5">{amount_paid}</div>
+                  </div>
+                  <div className="flex flex-row w-full">
+                    <div className="w-3/5">Due</div>
+                    <div className="w-2/5">{amount - amount_paid}</div>
+                  </div>
                 </div>
               </div>
-
-              {/* Grand Total */}
-              <div className="flex flex-col justify-between bg-slate-100 rounded p-2 font-semibold m-1">
-                <div className="flex flex-row w-full">
-                  <div className="w-3/5">Grand Total</div>
-                  <div className="w-2/5">{amount}</div>
+              <div>
+                <div className="flex justify-around mt-2">
+                  <button
+                    className="px-4 py-2 bg-slate-400 text-white rounded-lg"
+                    onClick={() => {
+                      setIsResetDialogOpen(true);
+                    }}
+                  >
+                    Reset
+                  </button>
+                  <button
+                    className="px-4 py-2 bg-main rounded-lg text-white"
+                    onClick={HandleSubmit}
+                  >
+                    Submit
+                  </button>
                 </div>
-              </div>
-
-              {/* Amount Paid and Due */}
-              <div className="flex flex-col justify-between bg-slate-100 rounded p-2 font-semibold m-1">
-                <div className="flex flex-row w-full">
-                  <div className="w-3/5">Amount Paid</div>
-                  <div className="w-2/5">{amount_paid}</div>
-                </div>
-                <div className="flex flex-row w-full">
-                  <div className="w-3/5">Due</div>
-                  <div className="w-2/5">{amount - amount_paid}</div>
-                </div>
-              </div>
-
-              <div className="flex justify-around m-4">
-                <button
-                  className="px-4 py-2 bg-slate-400 text-white rounded-lg"
-                  onClick={() => {
-                    setIsResetDialogOpen(true);
-                  }}
-                >
-                  Reset
-                </button>
-                <button
-                  className="px-4 py-2 bg-main rounded-lg text-white"
-                  onClick={HandleSubmit}
-                >
-                  Submit
-                </button>
               </div>
             </div>
           </div>

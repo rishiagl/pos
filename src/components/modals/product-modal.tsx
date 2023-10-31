@@ -98,10 +98,6 @@ export function AddProductModal(props: Props) {
 
   return (
     <>
-      <AddNewProductModal
-        show={showAddNewProductModal}
-        setShow={setShowAddNewProductModal}
-      ></AddNewProductModal>
       <Transition.Root show={props.show} as={Fragment}>
         <Dialog
           as="div"
@@ -139,15 +135,7 @@ export function AddProductModal(props: Props) {
                         as="h3"
                         className="text-lg font-semibold leading-6 text-gray-900"
                       >
-                        Add Product &nbsp;
-                        <button
-                          className="bg-main rounded-lg px-2 py-1 text-white"
-                          onClick={() => {
-                            setShowAddNewProductModal(true);
-                          }}
-                        >
-                          New
-                        </button>
+                        Add Product
                       </Dialog.Title>
                     </div>
                     <div className="m-2">
