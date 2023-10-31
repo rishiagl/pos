@@ -1,7 +1,6 @@
 import { Fragment, useEffect, useRef, useState } from "react";
 import { ProductType } from "../Product";
 import Select from "react-select";
-import AddNewProductModal from "./new-product-modal";
 import { getProduct } from "../../external/Product";
 import { useAuth0 } from "@auth0/auth0-react";
 import { ItemType } from "../../pages/home-page";
@@ -20,7 +19,6 @@ export function AddProductModal(props: Props) {
   const [qty, setQty] = useState<number>();
   const [rate, setRate] = useState<number>();
   const [allProducts, setAllProducts] = useState<ProductType[]>([]);
-  const [showAddNewProductModal, setShowAddNewProductModal] = useState(false);
 
   const cancelButtonRef = useRef(null);
 
@@ -60,7 +58,7 @@ export function AddProductModal(props: Props) {
     return () => {
       isMounted = false;
     };
-  }, [getAccessTokenSilently, props.show, showAddNewProductModal]);
+  }, [getAccessTokenSilently, props.show]);
 
   const handleClose = () => props.setShow(false);
 
