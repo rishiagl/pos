@@ -139,7 +139,6 @@ export default function CustomerModal(props: Props) {
                     </Dialog.Title>
                   </div>
                   <div className="m-2">
-                    <form>
                       <div className="flex flex-row mb-4">
                         <label className="form-label w-1/3">Phone No: </label>
                         <input
@@ -220,7 +219,6 @@ export default function CustomerModal(props: Props) {
                           Submit
                         </button>
                       </div>
-                    </form>
                   </div>
                 </div>
                 {/* <div className="bg-gray-50 px-4 py-3 flex flex-row justify-between sm:px-6">

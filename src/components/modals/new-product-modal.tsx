@@ -85,88 +85,63 @@ export default function AddNewProductModal(props: Props) {
                     </Dialog.Title>
                   </div>
                   <div className="m-2">
-                    <form>
-                      <div className="flex flex-row mb-3">
-                        <label className="form-label w-1/3">Name:</label>
-                        <input
-                          type="text"
-                          id="name"
-                          className="form-control rounded border p-1 w-2/3"
-                          value={name}
-                          onChange={(event) => setName(event.target.value)}
-                        ></input>
-                      </div>
+                    <div className="flex flex-row mb-3">
+                      <label className="form-label w-1/3">Name:</label>
+                      <input
+                        type="text"
+                        id="name"
+                        className="form-control rounded border p-1 w-2/3"
+                        value={name}
+                        onChange={(event) => setName(event.target.value)}
+                      ></input>
+                    </div>
 
-                      <div className="flex flex-row mb-3">
-                        <label className="form-label w-1/3">HSN:</label>
-                        <input
-                          className="form-control rounded border p-1 w-2/3"
-                          type="text"
-                          id="hsn"
-                          maxLength={8}
-                          value={hsn}
-                          onChange={(event) => setHsn(event.target.value)}
-                        ></input>
-                      </div>
+                    <div className="flex flex-row mb-3">
+                      <label className="form-label w-1/3">HSN:</label>
+                      <input
+                        className="form-control rounded border p-1 w-2/3"
+                        type="text"
+                        id="hsn"
+                        maxLength={8}
+                        value={hsn}
+                        onChange={(event) => setHsn(event.target.value)}
+                      ></input>
+                    </div>
 
-                      <div className="flex flex-row mb-3">
-                        <label className="form-label w-1/3">Tax Rate:</label>
-                        <input
-                          className="form-control rounded border p-1 w-2/3"
-                          type="number"
-                          id="tax_rate"
-                          value={tax_rate}
-                          onChange={(event) =>
-                            setTax_rate(parseInt(event.target.value))
-                          }
-                        ></input>
-                      </div>
+                    <div className="flex flex-row mb-3">
+                      <label className="form-label w-1/3">Tax Rate:</label>
+                      <input
+                        className="form-control rounded border p-1 w-2/3"
+                        type="number"
+                        id="tax_rate"
+                        value={tax_rate}
+                        onChange={(event) =>
+                          setTax_rate(parseInt(event.target.value))
+                        }
+                      ></input>
+                    </div>
 
-                      <div className="flex flex-row justify-between mt-8">
-                        <button
-                          type="button"
-                          className="bg-slate-200 rounded-lg px-4 py-2"
-                          onClick={() => {
-                            props.setShow(false);
-                          }}
-                          ref={cancelButtonRef}
-                        >
-                          Cancel
-                        </button>
-                        <button
-                          type="submit"
-                          className="bg-main text-white rounded-lg px-4 py-2"
-                          onClick={() => HandleSubmit()}
-                        >
-                          Submit
-                        </button>
-                      </div>
-                    </form>
+                    <div className="flex flex-row justify-between mt-8">
+                      <button
+                        type="button"
+                        className="bg-slate-200 rounded-lg px-4 py-2"
+                        onClick={() => {
+                          props.setShow(false);
+                        }}
+                        ref={cancelButtonRef}
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        type="submit"
+                        className="bg-main text-white rounded-lg px-4 py-2"
+                        onClick={() => HandleSubmit()}
+                      >
+                        Submit
+                      </button>
+                    </div>
                   </div>
                 </div>
-                {/* <div className="bg-gray-50 px-4 py-3 flex flex-row justify-between sm:px-6">
-                <button
-                  type="button"
-                  className="bg-gray-300 rounded px-4 py-2"
-                  onClick={() => {
-                    props.setShow(false);
-                    props.onClickNegative();
-                  }}
-                  ref={cancelButtonRef}
-                >
-                  Cancel
-                </button>
-                <button
-                  type="button"
-                  className="bg-red-500 rounded pl-4 pr-4 pt-2 pb-2 text-white"
-                  onClick={() => {
-                    props.setShow(false);
-                    props.onClickPositive();
-                  }}
-                >
-                  Proceed
-                </button>
-              </div> */}
               </Dialog.Panel>
             </Transition.Child>
           </div>
